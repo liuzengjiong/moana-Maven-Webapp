@@ -10,8 +10,7 @@ moana ticket purchase system by liuzengjiong
 
 
 注：
-redis在定时刷新票数时使用
-
+redis在定时刷新票数时使用；
 
 待办：
 持久层待换为datanucleus
