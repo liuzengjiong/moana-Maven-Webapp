@@ -1,27 +1,11 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <base href="<%=basePath%>">
-    
-    <title>用户登录</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
-	<link rel="stylesheet" type="text/css" href="styles.css">
-	-->
+    <meta charset="UTF-8">
+    <title>登录</title>
 	    <style>
 	     body{
-            background: url("<%= basePath %>/img/1.jpg");
+            background: url("../img/1.jpg");
         }
         #login{
             position: relative;
@@ -39,7 +23,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             position: relative;
             width: 260px;
             height: 32px;
-            background: cornsilk url("img/login2.png") no-repeat ;
+            background: cornsilk url("../img/login2.png") no-repeat ;
             border: 1px solid #cccccc;
             margin: 20px;
             padding-left: 5px;
@@ -57,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             position: relative;
             width: 260px;
             height: 32px;
-            background: cornsilk url("img/login2.png") no-repeat 0px -30px ;
+            background: cornsilk url("../img/login2.png") no-repeat 0px -30px ;
             border: 1px solid #cccccc;
             margin: 20px 20px 40px 20px;
             padding-left: 5px;
@@ -107,7 +91,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
             cursor: pointer;
         }
     </style>
-       <script src="js/jquery.min.js"></script>
+       <script src="../js/jquery.min.js"></script>
     <script>
     	//获取路径
 		function getContextPath(){   
@@ -127,23 +111,22 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
             oUsername.focus();
             oForget.onclick = function () {
-                alert("忘记就算了吧。");
+                alert("忘记就算了吧");
             }
 
             oBtn.onclick = function () {
                
                 $.ajax({
-                    url: "login",    //请求的url地址
-                    dataType: "json",   //返回格式为json
+                    url: getContextPath()+"/login",    
+                    dataType: "json",   
                     async: true, 
-                    data: { "account": encodeURI(oUsername.value),"password":encodeURI(oPassword.value)},    //参数值
-                    type: "POST",   //请求方式
+                    data: { "account": encodeURI(oUsername.value),"password":encodeURI(oPassword.value)},    //鍙傛暟鍊�
+                    type: "POST",   
                     beforeSend: function() {
-                        //请求前的处理
+                        
                     },
                     success: function(data) {
                     
-                        //请求成功时处理
                         if(data.code === '1'){
                             oMessage.style.display = 'none';
                             window.location.href = getContextPath()+"/html/movieList.html"
@@ -153,10 +136,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                         }
                     },
                     complete: function() {
-                        //请求完成的处理
                     },
                     error: function() {
-                        //请求出错处理
                     }
                 });
             }
@@ -167,16 +148,16 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
      <div id="login">
         <!--<form action="#" method="post">-->
-            <img src="img/loginback.png"/>
+            <img src="../img/loginback.png"/>
             <div id="name">
-                <input type="text" id="username" name="username" placeholder="请输入用户名"/><br/>
+                <input type="text" id="username" name="username" placeholder=请输入用户名/><br/>
             </div>
             <div id="psw">
                 <input type="password" id="password" name="password" placeholder="请输入密码"/><br/>
-                <label class="message">用户名或密码错误</label>
+                <label class="message">账号或密码错误</label>
             </div>
             <input class="submit" type="submit" id="btn" value="登录"/>
-            <span class="forget">忘记密码？</span>
+            <span class="forget">忘记密码</span>
         <!--</form>-->
     </div>
   </body>

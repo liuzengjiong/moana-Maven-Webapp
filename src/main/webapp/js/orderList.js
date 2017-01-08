@@ -103,7 +103,7 @@ function refleshList() {
 window.onload = function () {
    
     $("#quit").click(function(){
-    	window.location.href = getContextPath()+"/index.jsp";
+    	window.location.href = getContextPath();
     });
     setPagination();
     //刷新列表

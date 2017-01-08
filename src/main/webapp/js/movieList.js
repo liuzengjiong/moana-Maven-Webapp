@@ -25,7 +25,7 @@ window.onload = function () {
     refleshList();
     //oContainer.style.height = 200+oContent.offsetHeight+50+'px';
     $("#quit").click(function(){
-    	window.location.href = getContextPath()+"/index.jsp";
+    	window.location.href = getContextPath();
     });
   //设置分页控件
     function setVideoPagination(){
