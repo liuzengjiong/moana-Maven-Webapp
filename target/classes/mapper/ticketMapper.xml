@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.moana.dao.TicketMapper">
+
+
+    <select id="selectByIds" resultMap="remain_num">
+        SELECT id,remain_num
+        FROM ticket
+        WHERE id in <foreach collection="ids" item="item" index="index" 
+		open="(" separator="," close=")">#{item}</foreach>
+		
+    </select>
+     <resultMap id="remain_num" type="java.util.HashMap">
+        <result column="id" property="id"/>
+        <result column="remain_num" property="remainNum"/>
+    </resultMap>
+
+</mapper>

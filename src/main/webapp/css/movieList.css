@@ -1,0 +1,187 @@
+body{
+    background-color: aliceblue;
+}
+body,ul,li{
+    margin: 1;
+    padding: 0;
+}
+ul{
+    list-style: none;
+}
+li{
+	float:left
+}
+#container{
+    position: relative;
+    width: 980px;
+    min-height: 700px;
+    margin: 0 auto;
+    background-color: lavender;
+}
+#header {
+    position: absolute;
+    width: 980px;
+    height: 200px;
+    background: #79cfe6 url("../img/loginback.png") no-repeat 0 -30px;
+}
+#header .user {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: auto;
+    height: 30px;
+    padding-left: 40px;
+    /*border: 1px solid red;*/
+    text-align: right;
+    line-height: 30px;
+    background:  url("../img/login2.png") no-repeat;
+}
+#quit {
+    color: #f1f1f1;
+    cursor: pointer;
+}
+#quit:hover {
+    color: red;;
+}
+#content{
+    position: absolute;
+    width: 960px;
+    min-height: 400px;
+    padding: 10px;
+    /*border: 1px solid red;*/
+    top: 200px;
+}
+#add{
+    position: absolute;
+    top: 16px;
+    right: 50px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #cccccc;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#add:hover{
+    background-color: yellow;
+    color: #ff0000;
+}
+#list{
+    width: 100%;
+}
+#list li{
+    width: 940px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    line-height: 40px;
+    background-color: aquamarine;
+}
+#list li a{
+    text-decoration: none;
+}
+#list li a:hover{
+    color: #ffffff;
+}
+#list li span{
+	margin-left:30px;
+}
+#buyBtn{
+    position: absolute;
+    right: 50px;
+    width: 50px;
+    height: 30px;
+    margin-top: 6px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #c1c1c1;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#list li span:hover{
+    background-color: yellow;
+    color: #ff0000;
+}
+#footer{
+    position: absolute;
+    width: 980px;
+    height: 50px;/*
+            border: 1px solid red;*/
+    text-align: center;
+    line-height: 30px;
+    bottom: 0;
+}
+#wrap{
+    position: absolute;
+    top:0;
+    width: 1350px;
+    height: 700px;
+    background-color: rgba(173,173,173,0.5);
+    display: none;
+}
+#addPanel{
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    width: 400px;
+    min-height: 200px;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+#cancel{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #79cfe6;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+#sure{
+	line-height: 30px;
+	width: 50px;
+    height: 30px;
+    text-align: center;
+    background-color: #79cfe6;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+}
+
+#addPanel input{
+    margin-bottom: 20px;
+}
+#addPanel .buy{
+    width: 520px;
+    height: 120px;
+    resize: none;
+}
+#addfile{
+    width: 50px;
+}
+
+#div_pagination {
+	display: table;
+	width: auto !important;
+	margin: 0 auto !important;
+}
+table 
+  {   border-collapse:   separate; 
+       border-spacing:   10px;   
+       border-left:1px solid #F00;
+       border-bottom:1px solid #F00;
+} 
+td
+{
+    text-align:center;
+    border-right:1px solid #F00;
+    border-top:1px solid #F00
+}
+#buy_ticket_num{
+	background-color:#FFFFCC
+}
