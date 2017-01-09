@@ -11,6 +11,7 @@ http://119.29.10.25/moana
 
 
 注：
+用户状态保持：需开启 cookie  ；   
 服务器部署：nginx + tomcat + ubuntu  ； 
 数据库：mariadb + redis   ；   
 框架 ： ssm    ;
