@@ -11,7 +11,8 @@ www.lingzengjiong.cn/moana
 
 
 注：
-redis在定时刷新票数时使用；
-
+服务器部署：nginx + tomcat + ubuntu  ； 
+数据库：mariadb + redis   ；   
+框架 ： ssm    ;
 待办：
 持久层待换为datanucleus
