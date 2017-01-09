@@ -115,7 +115,7 @@ public class TicketApi {
     		ConcurrentMap<String, Object> map = redis.getMap(ids[i]);
     		//未存入到redis,或标志位已被置为dirty，需重新写入redis
     		if(map.get("id") == null || "".equals(map.get("id"))
-    				||map.get("flag").equals("dirty")){
+    				||"dirty".equals(map.get("flag"))){
     			LOG.info("----------------------重新写入redis");
     			Ticket ticket = ticketService.getTicketById(ids[i]);
     			map.put("id",ids[i]);
