@@ -2,7 +2,7 @@
 moana ticket purchase system by liuzengjiong
 
 演示地址： 
-www.lingzengjiong.cn/moana
+119.29.10.25/moana
 
 测试账号（未提供注册）：1
 测试密码 ：1
